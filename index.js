@@ -48,18 +48,18 @@ const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
   const data = await res.json();
   quizData = data;
-  displayQuiz(quizData.data);
+  displayQuiz(data);
 };
 
 // Displaying quiz on quiz page
 
 const displayQuiz = (data) => {
-  if (!data) {
-    quizContainer.innerHTML = "";
-    return;
-  }
+  // if (!data) {
+  // quizContainer.innerHTML = "";
+  //   return;
+  // }
 
-  
+  const quizContainer=document.getElementById("quizContainer");
  
 
   data.forEach((quiz, i) => {
